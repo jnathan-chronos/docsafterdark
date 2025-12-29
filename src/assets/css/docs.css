@@ -1888,10 +1888,31 @@ img.docs-generativeai-onboarding-dialog-image,
 /* CONTROLLED VARIABLES */
 /************************/
 
-.kix-appview-editor canvas,
+.kix-appview-editor canvas.kix-canvas-tile-content,
+.kix-appview-editor canvas.kix-canvas-tile,
 .kix-cursor
 {
   filter: var(--docsafterdark_document_invert);
+}
+
+/* DO NOT INVERT USER-INSERTED IMAGES */
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="Image"],
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="image"],
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="Drawing"],
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="drawing"],
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="Picture"],
+.kix-appview-editor :is(canvas, img, svg, image)[aria-label*="picture"],
+.kix-appview-editor :is(canvas, img, svg, image).kix-embedded-object,
+.kix-appview-editor :is(canvas, img, svg, image).kix-embedded-object-viewer,
+.kix-appview-editor :is(canvas, img, svg, image).kix-imageview,
+.kix-appview-editor :is(canvas, img, svg, image).kix-imageview-image,
+.kix-appview-editor :is(canvas, img, svg, image).kix-imageview-canvas,
+.kix-appview-editor .kix-embedded-object,
+.kix-appview-editor .kix-embedded-object-viewer,
+.kix-appview-editor .kix-imageview,
+.kix-appview-editor .kix-imageview-image
+{
+  filter: none !important;
 }
 
 /* DOCUMENT BORDER SHOULD BE CONTROLLABLE IN ANY MODE */
