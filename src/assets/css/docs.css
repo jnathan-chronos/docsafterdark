@@ -1888,7 +1888,8 @@ img.docs-generativeai-onboarding-dialog-image,
 /* CONTROLLED VARIABLES */
 /************************/
 
-.kix-appview-editor canvas,
+.kix-appview-editor canvas.kix-canvas-tile-content,
+.kix-appview-editor canvas.kix-canvas-tile,
 .kix-cursor
 {
   filter: var(--docsafterdark_document_invert);
